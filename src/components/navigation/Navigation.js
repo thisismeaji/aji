@@ -10,7 +10,7 @@ export default function Navigation() {
   useEffect(() => {
     const savedMode = localStorage.getItem("darkMode") === "true";
     setDarkMode(savedMode);
-  }, []); // Hanya dijalankan saat pertama kali mount
+  }, []);
 
   useEffect(() => {
     if (darkMode) {
@@ -19,6 +19,9 @@ export default function Navigation() {
       document.documentElement.classList.remove("dark");
     }
     localStorage.setItem("darkMode", darkMode.toString());
+
+    // Memicu event perubahan mode agar footer ikut berubah
+    window.dispatchEvent(new Event("darkModeChanged"));
   }, [darkMode]);
 
   const toggleDarkMode = () => {
