@@ -5,7 +5,13 @@ import Styles from "../navigation/navigation.module.css";
 import Image from "next/image";
 
 export default function Navigation() {
-  const [darkMode, setDarkMode] = useState(false);
+  // Ambil mode dari localStorage saat pertama kali load
+  const [darkMode, setDarkMode] = useState(() => {
+    if (typeof window !== "undefined") {
+      return localStorage.getItem("darkMode") === "true"; 
+    }
+    return false;
+  });
 
   useEffect(() => {
     if (darkMode) {
@@ -13,12 +19,18 @@ export default function Navigation() {
     } else {
       document.documentElement.classList.remove("dark");
     }
+    localStorage.setItem("darkMode", darkMode.toString()); // Simpan sebagai string "true" atau "false"
   }, [darkMode]);
+
+  const toggleDarkMode = () => {
+    setDarkMode((prevMode) => !prevMode);
+  };
+
   return (
     <nav className={Styles.nav}>
       <div
         className={`${Styles.toggleContainer} ${darkMode ? Styles.dark : ""}`}
-        onClick={() => setDarkMode(!darkMode)}
+        onClick={toggleDarkMode}
       >
         <span className={Styles.icon}>
           <Image

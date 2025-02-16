@@ -5,6 +5,15 @@
   --accentTwo: #112D4E;
 }
 
+.dark {
+  --primary: #112D4E; /* Warna latar belakang gelap */
+  --secondary: #3F72AF;
+  --accentOne: #DBE2EF;
+  --accentTwo: #F9F7F7;
+  color: #ffffff;
+}
+
+
 * {
   box-sizing: border-box;
   padding: 0;

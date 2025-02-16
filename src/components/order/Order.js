@@ -7,7 +7,7 @@ export default function Order() {
     <section>
       <div className={Styles.order}>
         <div>
-            <h3>Want a Custom Bio Link? Order now below!</h3>
+            <h2>Want a Custom Bio Link? Order now below!</h2>
         </div>
         <div>
           <ul>
