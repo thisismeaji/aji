@@ -13,7 +13,7 @@ const ListOrder = [
 
     {
         text: "Whatsaap",
-        img: "/assets/images/whatsaap.png",
+        img: "/assets/images/Whatsaap.png",
         link: "https://www.jeiya.my.id.com"
     },
 
