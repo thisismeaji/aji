@@ -1,0 +1,135 @@
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 600px;
+}
+
+.toggleContainer {
+  position: relative;
+  width: 70px;
+  height: 35px;
+  background-color: var(--accentTwo);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  z-index: 2;
+}
+
+.dark {
+  background-color: var(--primary);
+  transition: all 0.3s ease-in-out;
+}
+
+.dark .icon:nth-of-type(1) img {
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.dark .icon:nth-of-type(2) img {
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+}
+
+.icon:nth-of-type(2) img {
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon img {
+  position: relative;
+  z-index: 4;
+  max-width: 15px;
+  max-height: 15px;
+}
+
+.toggleCircle {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: var(--primary);
+  border-radius: 50%;
+  left: 2.5px;
+  transition: all 0.3s ease-in-out;
+  z-index: 3;
+}
+
+.dark .toggleCircle {
+  background-color: var(--accentTwo);
+  transition: all 0.3s ease-in-out;
+}
+
+.moveRight {
+  transform: translateX(35px);
+}
+
+.menuShare{
+    width: 50px;
+    height: 50px;
+    background-color: var(--accentTwo);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.menuShare span{
+    display: inline-block;
+    width: 2rem;
+    height: 2px;
+    background-color: var(--primary);
+}
+
+.menuShare span:nth-of-type(1), .menuShare span:nth-of-type(3){
+    width: 1.5rem;
+}
+
+@media screen and (max-width:786px) {
+
+    .toggleContainer{
+        width: 60px;
+        height: 30px;
+        padding: 2px;
+    }
+
+    .toggleCircle{
+        width: 25px;
+        height: 25px;
+        left: 2px;
+    }
+
+    .moveRight {
+        transform: translateX(31.5px);
+    }
+
+    .menuShare{
+        width: 40px;
+        height: 40px;
+        gap: 5px;
+    }
+
+    .menuShare span{
+        width: 1.5rem;
+    }
+
+    .menuShare span:nth-of-type(1), .menuShare span:nth-of-type(3){
+        width: 1rem;
+    }
+}
