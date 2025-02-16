@@ -5,13 +5,12 @@ import Styles from "../navigation/navigation.module.css";
 import Image from "next/image";
 
 export default function Navigation() {
-  // Ambil mode dari localStorage saat pertama kali load
-  const [darkMode, setDarkMode] = useState(() => {
-    if (typeof window !== "undefined") {
-      return localStorage.getItem("darkMode") === "true"; 
-    }
-    return false;
-  });
+  const [darkMode, setDarkMode] = useState(false); // Default false untuk SSR
+
+  useEffect(() => {
+    const savedMode = localStorage.getItem("darkMode") === "true";
+    setDarkMode(savedMode);
+  }, []); // Hanya dijalankan saat pertama kali mount
 
   useEffect(() => {
     if (darkMode) {
@@ -19,7 +18,7 @@ export default function Navigation() {
     } else {
       document.documentElement.classList.remove("dark");
     }
-    localStorage.setItem("darkMode", darkMode.toString()); // Simpan sebagai string "true" atau "false"
+    localStorage.setItem("darkMode", darkMode.toString());
   }, [darkMode]);
 
   const toggleDarkMode = () => {
