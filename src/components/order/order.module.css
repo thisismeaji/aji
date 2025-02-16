@@ -1,0 +1,39 @@
+.order{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 600px;
+}
+
+.order Img {
+    width: 1005;
+    height: 100%;
+    max-width: 40px;
+    max-height: 40px;
+    position: absolute;
+    left: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.order ul{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.order a{
+    background-color: var(--secondary);
+    width: 100%;
+    cursor: pointer;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 5px;
+
+}

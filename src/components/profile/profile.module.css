@@ -1,0 +1,17 @@
+.profile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 600px;
+}
+
+.profile img{
+    max-width: 110px;
+    max-height: 110px;
+    border-radius: 100%;
+}
+
+.profile h1, .profile p{
+    margin-top: 1rem;
+}

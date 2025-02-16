@@ -1,9 +1,9 @@
-.nav{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    max-width: 600px;
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 600px;
 }
 
 .toggleContainer {
@@ -77,59 +77,60 @@
   transform: translateX(35px);
 }
 
-.menuShare{
-    width: 50px;
-    height: 50px;
-    background-color: var(--accentTwo);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 7px;
-    border-radius: 2px;
-    cursor: pointer;
+.menuShare {
+  width: 50px;
+  height: 50px;
+  background-color: var(--accentTwo);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  border-radius: 2px;
+  cursor: pointer;
 }
 
-.menuShare span{
-    display: inline-block;
-    width: 2rem;
-    height: 2px;
-    background-color: var(--primary);
+.menuShare span {
+  display: inline-block;
+  width: 2rem;
+  height: 2px;
+  background-color: var(--primary);
 }
 
-.menuShare span:nth-of-type(1), .menuShare span:nth-of-type(3){
+.menuShare span:nth-of-type(1),
+.menuShare span:nth-of-type(3) {
+  width: 1.5rem;
+}
+
+@media screen and (max-width: 786px) {
+  .toggleContainer {
+    width: 60px;
+    height: 30px;
+    padding: 2px;
+  }
+
+  .toggleCircle {
+    width: 25px;
+    height: 25px;
+    left: 2px;
+  }
+
+  .moveRight {
+    transform: translateX(31.5px);
+  }
+
+  .menuShare {
+    width: 40px;
+    height: 40px;
+    gap: 5px;
+  }
+
+  .menuShare span {
     width: 1.5rem;
-}
+  }
 
-@media screen and (max-width:786px) {
-
-    .toggleContainer{
-        width: 60px;
-        height: 30px;
-        padding: 2px;
-    }
-
-    .toggleCircle{
-        width: 25px;
-        height: 25px;
-        left: 2px;
-    }
-
-    .moveRight {
-        transform: translateX(31.5px);
-    }
-
-    .menuShare{
-        width: 40px;
-        height: 40px;
-        gap: 5px;
-    }
-
-    .menuShare span{
-        width: 1.5rem;
-    }
-
-    .menuShare span:nth-of-type(1), .menuShare span:nth-of-type(3){
-        width: 1rem;
-    }
+  .menuShare span:nth-of-type(1),
+  .menuShare span:nth-of-type(3) {
+    width: 1rem;
+  }
 }
