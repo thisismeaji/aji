@@ -36,8 +36,8 @@ export default function Footer() {
               <Link href="/">
                 <Image
                   src={`/assets/icons/${name}-${darkMode ? "dark" : "light"}.png`}
-                  width={25}
-                  height={25}
+                  width={20}
+                  height={20}
                   alt={name}
                 />
               </Link>
