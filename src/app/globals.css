@@ -6,10 +6,10 @@
 }
 
 .dark {
-  --primary: #112D4E; /* Warna latar belakang gelap */
-  --secondary: #3F72AF;
-  --accentOne: #DBE2EF;
-  --accentTwo: #F9F7F7;
+  --primary: #222831; /* Warna latar belakang gelap */
+  --secondary: #31363F;
+  --accentOne: #76ABAE;
+  --accentTwo: #EEEEEE;
   color: #ffffff;
 }
 
